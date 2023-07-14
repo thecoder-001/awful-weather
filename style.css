@@ -1,0 +1,362 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282828;
+    color: #ebdbb2;
+    font-family: 'Monsterrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.bgimg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.bgimg {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://raw.githubusercontent.com/ngynLk/wallpapers/master/nature/florest-stair2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    filter: blur(0px);
+}
+
+.clock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #ebdbb2;
+    z-index: 100;
+  }
+  
+
+.area {
+    text-align: center;
+    padding-bottom: 1px;
+    background-color: #3c3836;
+    border: 3px solid #fbf1c7;
+    border-radius: 15px;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 30%;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.search:empty {
+    transform: translate(3.2%, 0);
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.search {
+    transform: translate(2%, 0);
+}
+
+.inputval {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    height: 0.5%;
+    background: rgba(181, 137, 0, 0.4);
+    font-style: inherit;
+    color: #fbf1c7;
+}
+
+.inputval::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+    border: none;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 30px;
+    background: #504945;
+    color: #ebdbb2;
+    font-family: inherit;
+    transition: 0.5s;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:hover {
+    background: #665c54;
+}
+
+.button:active {
+    background: #83a598;
+    color: #fbf1c7;
+}
+
+.displayweather {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+}
+
+.weathericon,
+.temp,
+.feelslike,
+.speed,
+.heading,
+.humidity,
+.desc {
+    padding: 3px;
+}
+
+.desc {
+    padding: 10px;
+}
+
+.temp:empty,
+.feelslike:empty,
+.speed:empty,
+.heading:empty,
+.humidity:empty,
+.desc:empty {
+  display: none;
+}
+
+.weathericon {
+    font-size: 40px;
+  }
+
+.github-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #ebdbb2;
+    z-index: 99;
+}
+.mastodon-link {
+    position: fixed;
+    bottom: 20px;
+    right: 60px;
+    font-size: 24px;
+    color: #ebdbb2;
+    z-index: 99;
+}
+
+/* Responsive Styling */
+
+@media only screen and (max-width: 768px) {
+    .area {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .area {
+        width: 90%;
+    }
+}
+
+
+/* generated with help of https://pixelcorners.lukeb.co.uk -- nice trick*/
+.pixel-corners,
+.pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 25px),
+    5px calc(100% - 25px),
+    5px calc(100% - 15px),
+    10px calc(100% - 15px),
+    10px calc(100% - 10px),
+    15px calc(100% - 10px),
+    15px calc(100% - 5px),
+    25px calc(100% - 5px),
+    25px 100%,
+    calc(100% - 25px) 100%,
+    calc(100% - 25px) calc(100% - 5px),
+    calc(100% - 15px) calc(100% - 5px),
+    calc(100% - 15px) calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 15px),
+    calc(100% - 5px) calc(100% - 15px),
+    calc(100% - 5px) calc(100% - 25px),
+    100% calc(100% - 25px),
+    100% 25px,
+    calc(100% - 5px) 25px,
+    calc(100% - 5px) 15px,
+    calc(100% - 10px) 15px,
+    calc(100% - 10px) 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 5px,
+    calc(100% - 25px) 5px,
+    calc(100% - 25px) 0px,
+    25px 0px,
+    25px 5px,
+    15px 5px,
+    15px 10px,
+    10px 10px,
+    10px 15px,
+    5px 15px,
+    5px 25px,
+    0px 25px);
+  position: relative;
+}
+.pixel-corners {
+  border: 5px solid transparent;
+}
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(5px 25px,
+    10px 25px,
+    10px 15px,
+    15px 15px,
+    15px 10px,
+    25px 10px,
+    25px 5px,
+    calc(100% - 25px) 5px,
+    calc(100% - 25px) 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 15px,
+    calc(100% - 10px) 15px,
+    calc(100% - 10px) 25px,
+    calc(100% - 5px) 25px,
+    calc(100% - 5px) calc(100% - 25px),
+    calc(100% - 10px) calc(100% - 25px),
+    calc(100% - 10px) calc(100% - 15px),
+    calc(100% - 15px) calc(100% - 15px),
+    calc(100% - 15px) calc(100% - 10px),
+    calc(100% - 25px) calc(100% - 10px),
+    calc(100% - 25px) calc(100% - 5px),
+    25px calc(100% - 5px),
+    25px calc(100% - 10px),
+    15px calc(100% - 10px),
+    15px calc(100% - 15px),
+    10px calc(100% - 15px),
+    10px calc(100% - 25px),
+    5px calc(100% - 25px));
+}
+.pixel-corners::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 25px),
+    5px calc(100% - 25px),
+    5px calc(100% - 15px),
+    10px calc(100% - 15px),
+    10px calc(100% - 10px),
+    15px calc(100% - 10px),
+    15px calc(100% - 5px),
+    25px calc(100% - 5px),
+    25px 100%,
+    calc(100% - 25px) 100%,
+    calc(100% - 25px) calc(100% - 5px),
+    calc(100% - 15px) calc(100% - 5px),
+    calc(100% - 15px) calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 15px),
+    calc(100% - 5px) calc(100% - 15px),
+    calc(100% - 5px) calc(100% - 25px),
+    100% calc(100% - 25px),
+    100% 25px,
+    calc(100% - 5px) 25px,
+    calc(100% - 5px) 15px,
+    calc(100% - 10px) 15px,
+    calc(100% - 10px) 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 5px,
+    calc(100% - 25px) 5px,
+    calc(100% - 25px) 0px,
+    25px 0px,
+    25px 5px,
+    15px 5px,
+    15px 10px,
+    10px 10px,
+    10px 15px,
+    5px 15px,
+    5px 25px,
+    0px 25px,
+    0px 50%,
+    5px 50%,
+    5px 25px,
+    10px 25px,
+    10px 15px,
+    15px 15px,
+    15px 10px,
+    25px 10px,
+    25px 5px,
+    calc(100% - 25px) 5px,
+    calc(100% - 25px) 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 15px,
+    calc(100% - 10px) 15px,
+    calc(100% - 10px) 25px,
+    calc(100% - 5px) 25px,
+    calc(100% - 5px) calc(100% - 25px),
+    calc(100% - 10px) calc(100% - 25px),
+    calc(100% - 10px) calc(100% - 15px),
+    calc(100% - 15px) calc(100% - 15px),
+    calc(100% - 15px) calc(100% - 10px),
+    calc(100% - 25px) calc(100% - 10px),
+    calc(100% - 25px) calc(100% - 5px),
+    25px calc(100% - 5px),
+    25px calc(100% - 10px),
+    15px calc(100% - 10px),
+    15px calc(100% - 15px),
+    10px calc(100% - 15px),
+    10px calc(100% - 25px),
+    5px calc(100% - 25px),
+    5px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fbf1c7;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners::after {
+  margin: -5px;
+}
