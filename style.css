@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ body {
 .bgimg {
     height: 100vh;
     width: 100%;
-    background-image: url(https://raw.githubusercontent.com/ngynLk/wallpapers/master/nature/florest-stair2.jpg);
+    background-image: url(https://raw.githubusercontent.com/thecoder-001/awful-weather/main/assets/florest-stair2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -66,7 +66,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     padding: 10px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif;;
 }
 
 .container {
